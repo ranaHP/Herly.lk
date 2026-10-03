@@ -1,0 +1,31 @@
+"""Editable SVG family for the reference-led Herly home screen."""
+from pathlib import Path
+root=Path(__file__).resolve().parent.parent/'assets/home'
+root.mkdir(exist_ok=True)
+shapes={
+'period':('#FF82B9','#FF0878','<path d="M33 7C28 17 15 27 15 39a17 17 0 0 0 34 0C49 27 40 16 33 7Z"/><path d="M26 28c-8 8-8 17-1 20" fill="none" stroke="#FFEAF3" stroke-width="3"/>'),
+'symptoms':('#EAC9FF','#8739FF','<path d="m35 6-20 29h14l-4 23 24-33H34Z"/>'),
+'mood':('#FFE470','#FF9638','<circle cx="32" cy="32" r="23"/><g fill="#D64D19" stroke="none"><ellipse cx="24" cy="28" rx="2.5" ry="3"/><ellipse cx="40" cy="28" rx="2.5" ry="3"/><path d="M22 37q10 13 20 0q-10 4-20 0"/></g>'),
+'sleep':('#DCBEFF','#804BFF','<path d="M37 8C14 3 2 33 20 49c13 13 33 3 36-9C30 51 17 27 37 8Z"/><path d="M19 20c-8 13-2 25 9 28" stroke="#FFF" stroke-width="2" fill="none"/>'),
+'water':('#9AE9FF','#188EFF','<path d="m17 17 4 37q11 5 22 0l4-37Z"/><ellipse cx="32" cy="17" rx="15" ry="5" fill="#C5F4FF"/><path d="m22 28 3 23q7 3 14 0l3-23q-10 5-20 0" fill="#39B8FF"/><path d="m25 32 2 13" stroke="white" stroke-width="2"/><ellipse cx="32" cy="16" rx="11" ry="2" fill="#489FF9"/>'),
+'exercise':('#90F3C6','#21C986','<path d="M11 19h7v27h-7ZM18 25h6v15h-6ZM24 30h16v6H24ZM40 25h6v15h-6ZM46 19h7v27h-7Z"/><path d="M6 28h5v10H6Zm47 0h5v10h-5"/><path d="M13 22v20m35-20v20" stroke="#D0FFE9" stroke-width="2"/>'),
+'nutrition':('#C9F679','#71B829','<path d="M33 22C10 10 6 38 22 53c4 5 7 2 10 2s7 3 11-2C59 38 54 10 33 22Z"/><path d="M32 20q-3-10-9-13" fill="none" stroke="#669B33" stroke-width="3"/><path d="M33 17q0-12 12-11-2 11-12 11" fill="#79C830"/><path d="M23 27q-8 8-2 17" stroke="#EDFFC5" fill="none" stroke-width="3"/>'),
+'weight':('#E7CAFF','#9C62F0','<rect x="13" y="10" width="38" height="46" rx="8"/><path d="M21 24a11 8 0 0 1 22 0Z" fill="#FCF7FF"/><path d="m32 23 4-8" stroke="#A069DF" stroke-width="2"/><path d="M19 31v15" stroke="#F8EBFF" stroke-width="2"/>'),
+'self-care':('#FF9EC8','#F62C80','<path d="M32 54C11 48 5 32 9 23c16 1 23 16 23 31ZM32 54c21-6 27-22 23-31-16 1-23 16-23 31ZM32 43C17 28 25 11 32 5c13 14 16 25 0 38Z"/>'),
+'more':('#DFB9FF','#9852E3','<rect x="10" y="10" width="18" height="18" rx="4"/><rect x="36" y="10" width="18" height="18" rx="4"/><rect x="10" y="36" width="18" height="18" rx="4"/><rect x="36" y="36" width="18" height="18" rx="4"/><g fill="#FFF8FF" stroke="none"><rect x="15" y="15" width="8" height="8" rx="1"/><rect x="41" y="15" width="8" height="8" rx="1"/><rect x="15" y="41" width="8" height="8" rx="1"/><rect x="41" y="41" width="8" height="8" rx="1"/></g>'),
+'calendar':('#E2BEFF','#9B49FF','<g transform="rotate(-12 32 32)"><rect x="10" y="13" width="44" height="43" rx="6"/><path d="M10 25h44M21 8v13m22-13v13" fill="none" stroke="#A365F4" stroke-width="4"/><g fill="#F5E8FF" stroke="none"><path d="M19 31h6v6h-6Zm11 0h6v6h-6Zm11 0h6v6h-6ZM19 42h6v6h-6Zm11 0h6v6h-6Zm11 0h6v6h-6Z"/></g></g>'),
+'goals':('#FFB5C7','#FF597F','<circle cx="30" cy="34" r="23"/><circle cx="30" cy="34" r="16" fill="#FFF0E7"/><circle cx="30" cy="34" r="10"/><circle cx="30" cy="34" r="4" fill="white"/><path d="m29 35 24-25m-8 8 0-9 9-3-1 9-8 3" fill="#FFBE67" stroke="#FFF2D3" stroke-width="2"/>'),
+'reminders':('#D6B8FF','#7946F6','<path d="M32 7v6M14 44c7-5 1-29 18-29s11 24 18 29Z"/><ellipse cx="32" cy="44" rx="22" ry="6"/><path d="M26 52q6 8 12 0" fill="#AD70FF"/><path d="M23 22q-5 4-5 13" stroke="#EFDAFF" fill="none" stroke-width="3"/>'),
+'insight':('#FFE98B','#FFB52E','<path d="M23 46C23 37 15 36 15 26a17 17 0 0 1 34 0c0 10-8 11-8 20Z"/><path d="M25 48h14v8H25Z"/><path d="M27 57h10M32 3V0M7 28H0m57 0h7M9 8l5 5m36 0 5-5M26 42c0-9-6-9-6-16a12 12 0 0 1 24 0" fill="none" stroke="#FFAE22" stroke-width="2"/>'),
+'steps':('#93F6D6','#25CF98','<path d="m22 14 11 7-5 12 10 7-6 14C12 52 9 43 17 34l6-8Z"/><path d="m38 7 12 6-3 9-10-6Z"/>'),
+'consultation':('#97E6FF','#179EFF','<rect x="9" y="10" width="46" height="34" rx="5"/><path d="M27 44v7h-8m18-7v7h8" fill="none" stroke="#3899FA" stroke-width="3"/><rect x="15" y="15" width="34" height="23" rx="2" fill="#F5FCFF"/><circle cx="32" cy="23" r="5"/><path d="M22 36q1-13 10-8 9-5 10 8Z"/>'),
+'location':('#C5C4FF','#7474FA','<path d="M32 57C7 31 11 8 32 8s25 23 0 49Z"/><circle cx="32" cy="27" r="8" fill="#EEECFF"/>'),
+'emergency':('#FFA5CB','#F93D8B','<rect x="10" y="20" width="44" height="34" rx="5"/><path d="M23 20v-8h18v8" fill="none" stroke="#FF54A1" stroke-width="4"/><path d="M32 45C11 31 26 24 32 32c6-8 21-1 0 13" fill="#FFF4F9"/>'),
+'flower':('#FFB7D4','#FF4795','<g><ellipse cx="32" cy="20" rx="9" ry="14"/><ellipse cx="32" cy="44" rx="9" ry="14"/><ellipse cx="20" cy="32" rx="14" ry="9"/><ellipse cx="44" cy="32" rx="14" ry="9"/></g><circle cx="32" cy="32" r="8" fill="#FFD362"/>'),
+'sun':('#FFE786','#FFB300','<circle cx="32" cy="32" r="15"/><path d="M32 3v8m0 42v8M3 32h8m42 0h8M11 11l6 6m30 30 6 6M11 53l6-6m30-30 6-6" fill="none" stroke="#FFBA25" stroke-width="2"/>')}
+for name,(light,dark,body) in shapes.items():
+ svg=f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="{light}"/><stop offset="1" stop-color="{dark}"/></linearGradient></defs><g fill="url(#g)" stroke="{dark}" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">{body}</g></svg>'''
+ (root/f'{name}.svg').write_text(svg)
+(root/'petal.svg').write_text('''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g fill="#FFF7FA" stroke="#FFCAE0" stroke-width="1"><path d="M32 55C11 48 6 32 9 23c16 1 23 16 23 32ZM32 55c21-7 26-23 23-32-16 1-23 16-23 32ZM32 46C18 29 25 13 32 5c13 15 15 27 0 41Z"/></g></svg>''')
+(root/'botanical.svg').write_text('''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 900"><g fill="#FF9FBF" opacity=".13"><path d="M380 900Q280 500 400 100Q300 240 315 390 240 190 210 180q-10 200 110 250Q180 320 170 400q30 120 158 160Q180 500 190 580q30 90 149 120Q250 700 230 730q40 100 140 130Z"/><path d="M0 600Q100 720 0 900q90-150 100-90Q120 890 0 900Z"/></g><g fill="#B991EC" opacity=".12"><path d="M390 650Q290 590 280 500q100 10 110 150ZM370 800Q280 760 285 675q70 25 85 125ZM40 890Q130 840 145 780q-80 0-105 110Z"/></g></svg>''')
+print(f'Created {len(shapes)+2} home SVG assets')
